@@ -4,14 +4,15 @@
 
 Everything must go through Gatsby.
 
-- public foder
+### Public folder
+
 - this is where the build of Gatsby goes
 - this is what gets deployed
 - don't modify anything in this folder
 - if you run into trouble with Gatsby; just delete this folder; Gatsby will rebuild it (same as Gatsby Clean)
-- 
 
-- static folder
+### Static folder
+
 - put files that you simply want to be served up
 - like its a regular static webpage
 - can put favicon in here
@@ -20,7 +21,8 @@ Everything must go through Gatsby.
 - IMPORTANT: Everything must go through Gatsby, meaning that all of our JS, CSS, Images, everything MUST be imported by Gatsby so Gatsby can know all about your site and optimize the build for it
 
 
-- src folder
+### src folder
+
 - 'pages' is special in Gatsby; this is where most of Gatsby will live
   - 'pages' can be static or dynamic
   - setup 'index.js' and export react component to display when this page shows up
@@ -44,4 +46,10 @@ IMPORTANT: when creating our 'Pages' Files we do not start with CAPS as we would
 Create all the pages with copy; paste; rename;
 
 In the next lesson we talk about going from page to page the Gatsby Way!
+
+Page Naming
+
+- Name the file with no Cap start
+- Name the component with Name followed by Page such as HomePage
+- 
 
