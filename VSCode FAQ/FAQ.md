@@ -6,3 +6,10 @@ A: In VS Code, you can go to File -> Preferences -> Keyboard Shortcuts (Windows,
 
 Q: How do I set PATH on Mac so I can run VSCode in terminal
 
+
+
+Q: How to change a TAG and have closing tag change as well
+
+A: VSCode extension
+![auto rename tag](../_img/vscode-ext-auto-rename-tag.png)
+
