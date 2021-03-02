@@ -6,7 +6,7 @@ A: In VS Code, you can go to File -> Preferences -> Keyboard Shortcuts (Windows,
 
 Q: How do I set PATH on Mac so I can run VSCode in terminal
 
-
+A: In VSCode, open Command Palette (cmd + shift + p). Type in "path" and you will see a command to "Shell Command: Install 'Code' command in PATH"
 
 Q: How to change a TAG and have closing tag change as well
 
