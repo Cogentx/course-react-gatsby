@@ -53,3 +53,38 @@ Page Naming
 - Name the component with Name followed by Page such as HomePage
 - 
 
+
+Public - don't put stuff in here
+
+Static - files to serve directly like favicon. Generally don't put anything in here
+- REMEMBER:  Everything must GO THRU GATSBY
+
+SRC
+- all code goes in source but none of the folders are Gatsby specific except PAGES - this is where we put our Gatsby pages
+- everything else we can call what we want and organize how we want
+- examples
+- assets (fonts and images)
+- components (react compnents)
+- styles (styles; notice .gitkeep allows git to keep empty folders)
+- templates
+- utils
+
+Gatsby Pages
+
+Pages in Gatsby can be dynamically generated or they can be done on file system routes
+
+WILL CHANGE IN FUTURE... but for now **import react from 'react'; ** must go at the top of each Gatsby page
+
+PACKAGE.JSON SCRIPTS
+![04-scripts](./_img/04%20-%20scripts%20at%202.42.06%20PM.png)
+
+"develop" puts us into a development live reload mode. We kick this off with "start"
+
+`npm start`
+
+pops up localhost URL as well as a "graphql"
+
+
+
+
+
