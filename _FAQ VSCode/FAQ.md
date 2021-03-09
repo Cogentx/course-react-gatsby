@@ -13,3 +13,19 @@ Q: How to change a TAG and have closing tag change as well
 A: VSCode extension
 ![auto rename tag](../_img/vscode-ext-auto-rename-tag.png)
 
+Q: How do I get auto imports working?
+
+A: Auto Imports is now a VS Code built-in feature. Try `ctrl+space`. If that does not work then may need to add a **jsconfig.json** file to the project root (`checkJs` must be set to `true`). For example:
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "jsx": "preserve",
+    "checkJs": true,
+    "strictFunctionTypes": true
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
+}
+```
