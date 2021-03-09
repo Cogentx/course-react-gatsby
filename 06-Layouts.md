@@ -4,10 +4,12 @@
 
 ### Layouts in Gatsby
 
-Gatsby special layout files can wrap your code 
+Gatsby special layout files can wrap your code.
+
+MUST GO IN GATSBY ROOT DIRECTORY... NOT IN SRC !!!
 
 - gatsby-browser (only works in browser so may have to also put in gatsby-ssr)
-  - runs once page has been generated in the browser
+  - runs once page has been loaded in the browser
   - allows you to tap into gatsby apis
   - `wrapPageElement` (<https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/#wrapPageElement>)
   - this is basically our own plugin
@@ -24,9 +26,10 @@ export function wrapPageElement({ element, props }) {
 }
 ```
 
+IMPORTANT!!!
 
-- gatsby-ssr
-  - copy everything from gatsby-browser
+- gatsby-ssr.js (in root of gatsby project)
+  - copy everything from gatsby-browser.js
 
 
 
