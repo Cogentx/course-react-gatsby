@@ -12,7 +12,7 @@ React Components are Reuseable (such as Nav); are often stored in the src/Compon
 
 Gatsby routing is done using the {Link} from 'gatsby'
 
-- it uses HTML5 'push state' that changes the browser URL without doing a full page refresh the way an Anchor (a) tag does by default
+- it uses HTML5 'push state' that changes the browser URL without doing a **full page refresh** the way an Anchor (a) tag does by default
 - instead of
 - `a href="/"`
 - we use
