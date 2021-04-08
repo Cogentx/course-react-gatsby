@@ -1,5 +1,7 @@
 # Gatsby Q & A
 
+## Q & A
+
 Q: My data was showing perfectly fine in Gatsby a few days ago and now it isn't.
 
 A: Many common issues such as stale data or corrupt data can be fixed by running gatsby clean in the terminal - make sure you are in the Gatsby folder in the terminal. Gatsby uses an aggressive cache that can corrupt at times so you can try to fix it by cleaning the cache out
@@ -27,3 +29,5 @@ A: Please make sure you have the 2 options watchMode and token configured in the
 Q: I made a change to my Sanity schema and it's not showing in Gatsby?
 
 A: Changes to the schema in your local Sanity studio will not automatically change the Sanity GraphQL API, you'll have to deploy those changes by using sanity graphql deploy production. Make sure that you are in the Sanity folder in your terminal when you run that command.
+
+
