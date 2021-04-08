@@ -10,7 +10,7 @@ A: In VSCode, open Command Palette (cmd + shift + p). Type in "path" and you wil
 
 Q: How to change a TAG and have closing tag change as well
 
-A: VSCode extension
+A: VSCode extension - Auto Imports
 ![auto rename tag](../_img/vscode-ext-auto-rename-tag.png)
 
 Q: How do I get auto imports working?
@@ -29,3 +29,12 @@ A: Auto Imports is now a VS Code built-in feature. Try `ctrl+space`. If that doe
   "exclude": ["node_modules", "**/node_modules/*"]
 }
 ```
+
+Q: How do I paste a number range within  a string
+
+A: VSCode extension - TextPastry
+
+
+
+
+
