@@ -41,3 +41,41 @@ query {
 #   }
 # }
 ```
+
+### Rename Query in GraphQL
+
+Put your chosen name in front of query name separated by colon. In this example  ` pizzas: allSanityPizza { `
+
+```javascript
+export const query = graphql`
+  query PizzaQuery {
+    pizzas: allSanityPizza {
+      nodes {
+        name
+        id
+        slug {
+          current
+        }
+        toppings {
+          id
+          name
+        }
+        image {
+          asset {
+            fluid(maxWidth: 400) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+```
+
+Before:
+![18b-gql-org](./18b-gql-org)
+
+After:
+![18c-gql-renamed](./18c-gql-renamed)
+
