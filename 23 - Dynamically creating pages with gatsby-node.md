@@ -105,6 +105,9 @@ export async function createPages(params) {
 
 Use **React Context** to pass data:
 
+**Correct**:         pageContext
+**Deprecated**:   pathContext
+
 ```javascript
   data.pizzas.nodes.forEach((pizza) => {
     // console.log(`Creating page for ${p.name}`);
@@ -127,4 +130,64 @@ Inspect | Search for SinglePizzaPage
 
 ![23-context](./_img/23-context.png)
 
+#### Dynamic Query for SinglePizzaPage with GraphQL
 
+using GraphiQL to get our basic GraphQL query figured out
+
+```Graph-i-QL
+query {
+  sanityPizza(slug: {
+    current: {
+      eq: "nacho-average-pizza"
+    }
+  }) {
+    name
+    toppings {
+      name
+    }
+  }
+}
+```
+
+```javascript
+import React from 'react';
+import { graphql } from 'gatsby';
+
+export default function SinglePizzaPage() {
+  return <p>Single Pizza!!!</p>;
+}
+
+// this needs to be Dynamic  based on the slug passed in via context in gatsby-node.js
+// This is a GraphQL Query which has access to all our contexts directly
+// use Parens after QUERY to pass in Dynamic variables
+// all Dynamic variables being accepted must be TYPED
+// the BANG ( ` ! `) on the end means it's absolutely required... meaning you cannot view this page without passing it a slug
+// $slug is passed in because we set a CONTEXT variable named SLUG when we call **actions.createPage** from **gatsby-node.js**
+export const query = graphql`
+  query($slug: String!) {
+    pizza: sanityPizza(slug: { current: { eq: $slug } }) {
+      name
+      id
+      image {
+        asset {
+          fluid(maxWidth: 800) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+      toppings {
+        name
+      }
+    }
+  }
+`;
+```
+
+**React-Dev-Tools Output**:
+
+![23-dynamic-page-query.png](./_img/23-dynamic-page-query.png)
+
+Q. Why not just pass the entire Pizza Object via Context and avoid the Query on the SinglePizzaPage?
+
+A. That is perfectly valid... however... because all the SinglePizzaPages work the same... it is sometimes easier to have the Query directly in this code in case modifications or even just a quick check of something in the query is needed. Another benefit is that as soon as you make a change to the Query in SinglePizzaPage, it is automatically updated in the React-Dev-Tools. Another related advantage is that if you wrote your entire Query in Gatsby-Node you would have to kill the process each time you made a Query Update and that process can be slow as your website grows.
+... again - not a hard and fast rule - personal preference
