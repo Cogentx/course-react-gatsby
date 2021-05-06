@@ -2,14 +2,12 @@
 
 ## Gatsby SEO and Head Tags
 
-### Gatsby SEO and Head Tags
-
 Highest Level we have in our Website is 'Layout.js' - and there is no HTML <body> and <head> tags for meta data and SEO.
 - These things are added automatically by Gatsby
 
 So the Question is... how do you stick stuff in the <head> if you need to. For example, a <title> tag for the browser tab.
 
-#### React Helmet
+### React Helmet
 
 React component that allows you to wrap elements such as <title> and it places them inside the 'index.html' <head> section of the website.
 
@@ -27,7 +25,7 @@ Inside JSX of Component use
 
 The <Helmet> tag can be placed anywhere. If more than one location has a **title** tag, for example, the last read **title** wins and gets placed inside the <head> tag of **index.html** website file.
 
-#### SEO - Create Reuseable Component
+### SEO - Create Reuseable Component
 
 Setup **defaults** by using **React Helmet** and creating an 'SEO.js' Component which you can then use to wrap code in multiple places. Basically anything you want inserted into the <head> section of your website HTML.
 
@@ -83,7 +81,7 @@ export default function SEO({ children, location, description, title, image }) {
 }
 ```
 
-#### SEO Component - html
+### SEO Component - html
 
 We can **query** data into a Component that is not a **page** Component by using **Static Query** (`useStaticQuery`)
 
@@ -137,7 +135,7 @@ export default function SEO({ children, location, description, title, image }) {
 
 **Note**: we can reference 'logo.svg' using an absolute path because it is located in our project's **static** folder.
 
-#### Add SEO Component to Pages
+### Add SEO Component to Pages
 
 'Pizza.js' Template
 
