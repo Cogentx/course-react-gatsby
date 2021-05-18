@@ -14,6 +14,11 @@ It's just Node code that can be deployed anywhere.
 
 In the root of your application add a **netlify.toml**. This file tells the Netlify build where to find the functions.
 
+```bash
+[build]
+  functions = "functions/"
+```
+
 They are **AWS Lamdas** under the hood so you can always go to the Amazon AWS Lamda docs if you need more information.
 
 ### Setup 'functions' folder in Root
